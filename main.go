@@ -55,7 +55,7 @@ func formatEvent(event Event) string {
 		if count != 1 {
 			commitWord = "commits"
 		}
-		return fmt.Sprintf("🔨 Pushed %d %s to %s (%s)", count, commitWord, repo, timeStr)
+		return fmt.Sprintf(" Pushed %d %s to %s (%s)", count, commitWord, repo, timeStr)
 
 	case "CreateEvent":
 		var payload CreatePayload
@@ -64,7 +64,7 @@ func formatEvent(event Event) string {
 		if refType == "" {
 			refType = "repository"
 		}
-		return fmt.Sprintf("✨ Created %s in %s (%s)", refType, repo, timeStr)
+		return fmt.Sprintf(" Created %s in %s (%s)", refType, repo, timeStr)
 
 	case "DeleteEvent":
 		var payload DeletePayload
@@ -82,7 +82,7 @@ func formatEvent(event Event) string {
 		if action == "" {
 			action = "updated"
 		}
-		return fmt.Sprintf("📝 %s an issue in %s (%s)", capitalize(action), repo, timeStr)
+		return fmt.Sprintf(" %s an issue in %s (%s)", capitalize(action), repo, timeStr)
 
 	case "IssueCommentEvent":
 		return fmt.Sprintf("💬 Commented on an issue in %s (%s)", repo, timeStr)
@@ -91,7 +91,7 @@ func formatEvent(event Event) string {
 		return fmt.Sprintf("⭐ Starred %s (%s)", repo, timeStr)
 
 	case "ForkEvent":
-		return fmt.Sprintf("🍴 Forked %s (%s)", repo, timeStr)
+		return fmt.Sprintf(" Forked %s (%s)", repo, timeStr)
 
 	case "PullRequestEvent":
 		var payload PullRequestPayload
@@ -119,7 +119,7 @@ func formatEvent(event Event) string {
 		if len(eventName) > 5 && eventName[len(eventName)-5:] == "Event" {
 			eventName = eventName[:len(eventName)-5]
 		}
-		return fmt.Sprintf("📌 %s in %s (%s)", eventName, repo, timeStr)
+		return fmt.Sprintf(" %s in %s (%s)", eventName, repo, timeStr)
 	}
 }
 
@@ -175,7 +175,7 @@ func fetchUserActivity(username string) error {
 	fmt.Println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
 
 	for _, event := range events {
-		fmt.Println(formatEvent(event))
+		 fmt.Println(formatEvent(event))
 	}
 
 	return nil
@@ -196,3 +196,4 @@ func main() {
 		os.Exit(1)
 	}
 }
+
