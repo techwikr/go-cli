@@ -1,17 +1,25 @@
-# go-cli
-i just started with go and as my begginer project i chose github user activity cli version 
-https://github.com/techwikr/go-cli
-https://roadmap.sh/projects/github-user-activity
+# GitHub User Activity CLI
 
-If you dont have go installed on your computer then u need to install it
+A simple CLI tool built with Go to check GitHub user activity.  
+This project is perfect for beginners looking to practice Go.
 
-To run the file copy this command 
+## Prerequisites
 
+Make sure you have [Go](https://golang.org/dl/) installed on your computer.
 
+## Installation
 
-go run (filename).go (username)
+1. Clone this repository:
 
+```bash
+git clone https://github.com/techwikr/go-cli.git
+cd go-cli
 
+# macOS
+brew install go
 
+# Ubuntu/Debian
+sudo apt update
+sudo apt install golang-go
 
-without the bracket
+go run filename.go username
