@@ -6,4 +6,12 @@ https://roadmap.sh/projects/github-user-activity
 If you dont have go installed on your computer then u need to install it
 
 To run the file copy this command 
-go run (filename).go (username)   without the bracket
+
+
+
+go run (filename).go (username)
+
+
+
+
+without the bracket
